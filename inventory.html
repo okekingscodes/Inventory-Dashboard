@@ -54,7 +54,7 @@
                 <i class="fas fa-users"></i>
                 <div>
                     <h3>8, 267</h3>
-                    <span>New Users</span>
+                    <span>Total Workers</span>
                 </div>
             </div>
             <div class="val-box">
@@ -80,7 +80,7 @@
             </div>
         </div>
     
-        <div class="inventory-btn">Add Items</div>
+        <div class="inventory-btn" id="show-addBtn">Add Items</div>
         
         <div class="tabContainer">
             <div class="buttonContainer">
@@ -93,67 +93,62 @@
             <div class="tabPanel">
                 <div class="board">
                     <table width="95%">
-                        <thead>
+                        <thead class="thead">
                             <tr>
-                                <td>S/N</td>
-                                <td>Name of Person</td>
-                                <td>Name of Item</td>
-                                <td>Quantity</td>
-                                <td>Status</td>
-                                <td>Site Name</td>
-                                <td></td>
+                                <td class="sn">S/N</td>
+                                <td class="td">Name of Item</td>
+                                <td class="td">Quantity</td>
+                                <td class="td">Shelf Location</td>
+                                <td class="td">Status</td>
+                                <td class="td">Site Name</td>
+                                <td class="td">Date</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="people">1</td>
-                                <td class="people-des">
-                                    <h5>Odim Kingsley</h5>
-                                </td>
-                                <td>Electric bulb</td>
-                                <td>20</td>
-                                <td>Check-In</td>
-                                <td>Dynamic construction company</td>
+                                <td class="td">1</td>
+                                <td class="td">Electric bubl</td>
+                                <td class="td">20</td>
+                                <td class="td">Shelf-D</td>
+                                <td class="td">Check-In</td>
+                                <td class="site">Dynamic construction company</td>
+                                <td class="td">12-09-2023</td>
                             </tr>
                             <tr>
-                                <td class="people">2</td>
-                                <td class="people-des">
-                                    <h5>Isaac Newton</h5>
-                                </td>
-                                <td>Cement</td>
-                                <td>5</td>
-                                <td>Check-Out</td>
-                                <td>Dantata Const.</td>
+                                <td class="td">2</td>
+                                <td class="td">Electric bubl</td>
+                                <td class="td">20</td>
+                                <td class="td">Shelf-D</td>
+                                <td class="td">Check-In</td>
+                                <td class="site">Dynamic construction company</td>
+                                <td class="td">12-09-2023</td>
                             </tr>
                             <tr>
-                                <td class="people">3</td>
-                                <td class="people-des">
-                                    <h5>Ayodeyi Bola</h5>
-                                </td>
-                                <td>Toilet Sitter</td>
-                                <td>2</td>
-                                <td>Check-In</td>
-                                <td>Julius Berger</td>
+                                <td class="td">3</td>
+                                <td class="td">Electric bubl</td>
+                                <td class="td">20</td>
+                                <td class="td">Shelf-D</td>
+                                <td class="td">Check-In</td>
+                                <td class="site">Dynamic construction company</td>
+                                <td class="td">12-09-2023</td>
                             </tr>
                             <tr>
-                                <td class="people">4</td>
-                                <td class="people-des">
-                                    <h5>Fidelix Titus</h5>
-                                </td>
-                                <td>Tiles</td>
-                                <td>25 Packs</td>
-                                <td>Check-Out</td>
-                                <td>Dynamic construction company</td>
+                                <td class="td">3</td>
+                                <td class="td">Electric bubl</td>
+                                <td class="td">20</td>
+                                <td class="td">Shelf-D</td>
+                                <td class="td">Check-In</td>
+                                <td class="site">Dynamic construction company</td>
+                                <td class="td">12-09-2023</td>
                             </tr>
                             <tr>
-                                <td class="people">5</td>
-                                <td class="people-des">
-                                    <h5>Odim Kingsley</h5>
-                                </td>
-                                <td> Constant Wire</td>
-                                <td>7 metre</td>
-                                <td>Check-In</td>
-                                <td>Dynamic construction company</td>
+                                <td class="td">3</td>
+                                <td class="td">Electric bubl</td>
+                                <td class="td">20</td>
+                                <td class="td">Shelf-D</td>
+                                <td class="td">Check-In</td>
+                                <td class="site">Dynamic construction company</td>
+                                <td class="td">12-09-2023</td>
                             </tr>
                         </tbody>
                     </table>
@@ -170,24 +165,300 @@
             </div>
             
 
+            <!-- Content for the second tab goes here -->
             <div class="tabPanel">
-                <!-- Content for the second tab goes here -->
-                Tab 2 contents
+                <div class="board">
+                    <table width="95%">
+                        <thead class="thead">
+                            <tr>
+                                <td class="sn">S/N</td>
+                                <td class="td">Full Name</td>
+                                <td class="td">Name of Item</td>
+                                <td class="td">Quantity</td>
+                                <td class="td">Site Name</td>
+                                <td class="td">Date</td>
+                                <td class="td">Remarks</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td">1</td>
+                                <td class="td">
+                                    <h5>Odim Kingsley</h5>
+                                    <p>Technician</p>
+                                </td>
+                                <td class="td">Tiles</td>
+                                <td class="td">12 packs</td>
+                                <td class="site">Portland company</td>
+                                <td class="td">12-09-2023</td>
+                                <td class="td">Approved</td>
+                            </tr>
+                            <tr>
+                                <td class="td">2</td>
+                                <td class="td">
+                                    <h5>Odim Kingsley</h5>
+                                    <p>Technician</p>
+                                </td>
+                                <td class="td">Tiles</td>
+                                <td class="td">12 packs</td>
+                                <td class="site">Portland company</td>
+                                <td class="td">12-09-2023</td>
+                                <td class="td">Approved</td>
+                            </tr>
+                            <tr>
+                                <td class="td">3</td>
+                                <td class="td">
+                                    <h5>Odim Kingsley</h5>
+                                    <p>Technician</p>
+                                </td>
+                                <td class="td">Tiles</td>
+                                <td class="td">12 packs</td>
+                                <td class="site">Portland company</td>
+                                <td class="td">12-09-2023</td>
+                                <td class="td">Approved</td>
+                            </tr>
+                            <tr>
+                                <td class="td">4</td>
+                                <td class="td">
+                                    <h5>Odim Kingsley</h5>
+                                    <p>Technician</p>
+                                </td>
+                                <td class="td">Tiles</td>
+                                <td class="td">12 packs</td>
+                                <td class="site">Portland company</td>
+                                <td class="td">12-09-2023</td>
+                                <td class="td">Approved</td>
+                            </tr>
+                            <tr>
+                                <td class="td">5</td>
+                                <td class="td">
+                                    <h5>Odim Kingsley</h5>
+                                    <p>Technician</p>
+                                </td>
+                                <td class="td">Tiles</td>
+                                <td class="td">12 packs</td>
+                                <td class="site">Portland company</td>
+                                <td class="td">12-09-2023</td>
+                                <td class="td">Approved</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+              <!-------Pages------->
+                <div class="pages">
+                    <div class="pre">&lt;</div>
+                    <div class="pre">1</div>
+                    <div class="pre">2</div>
+                    <div class="pre">3</div>
+                    <div class="pre">&gt;</div>
+                </div>                
             </div>
             
+            <!-- Content for the third tab goes here -->
             <div class="tabPanel">
-                <!-- Content for the third tab goes here -->
-                Tab 3 contents
+                <div class="board">
+                    <table width="95%">
+                        <thead class="thead">
+                            <tr>
+                                <td class="sn">S/N</td>
+                                <td class="td">Full Name</td>
+                                <td class="td">Name of Item</td>
+                                <td class="td">Quantity</td>
+                                <td class="td">Site Name</td>
+                                <td class="td">Date</td>
+                                <td class="td">Remarks</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td">1</td>
+                                <td class="td">
+                                    <h5>Odim Kingsley</h5>
+                                    <p>Technician</p>
+                                </td>
+                                <td class="td">Tiles</td>
+                                <td class="td">12 packs</td>
+                                <td class="site">Portland company</td>
+                                <td class="td">12-09-2023</td>
+                                <td class="td">Approved</td>
+                            </tr>
+                            <tr>
+                                <td class="td">2</td>
+                                <td class="td">
+                                    <h5>Odim Kingsley</h5>
+                                    <p>Technician</p>
+                                </td>
+                                <td class="td">Tiles</td>
+                                <td class="td">12 packs</td>
+                                <td class="site">Portland company</td>
+                                <td class="td">12-09-2023</td>
+                                <td class="td">Approved</td>
+                            </tr>
+                            <tr>
+                                <td class="td">3</td>
+                                <td class="td">
+                                    <h5>Odim Kingsley</h5>
+                                    <p>Technician</p>
+                                </td>
+                                <td class="td">Tiles</td>
+                                <td class="td">12 packs</td>
+                                <td class="site">Portland company</td>
+                                <td class="td">12-09-2023</td>
+                                <td class="td">Approved</td>
+                            </tr>
+                            <tr>
+                                <td class="td">4</td>
+                                <td class="td">
+                                    <h5>Odim Kingsley</h5>
+                                    <p>Technician</p>
+                                </td>
+                                <td class="td">Tiles</td>
+                                <td class="td">12 packs</td>
+                                <td class="site">Portland company</td>
+                                <td class="td">12-09-2023</td>
+                                <td class="td">Approved</td>
+                            </tr>
+                            <tr>
+                                <td class="td">5</td>
+                                <td class="td">
+                                    <h5>Odim Kingsley</h5>
+                                    <p>Technician</p>
+                                </td>
+                                <td class="td">Tiles</td>
+                                <td class="td">12 packs</td>
+                                <td class="site">Portland company</td>
+                                <td class="td">12-09-2023</td>
+                                <td class="td">Approved</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            
+              <!-------Pages------->
+                <div class="pages">
+                    <div class="pre">&lt;</div>
+                    <div class="pre">1</div>
+                    <div class="pre">2</div>
+                    <div class="pre">3</div>
+                    <div class="pre">&gt;</div>
+                </div>
             </div>
             
+            <!-- Content for the fourth tab goes here -->
             <div class="tabPanel">
-                <!-- Content for the fourth tab goes here -->
-                Tab 4 contents
+                <div class="board">
+                    <table width="95%">
+                        <thead class="thead">
+                            <tr>
+                                <td class="sn">S/N</td>
+                                <td class="td">Complaint</td>
+                                <td class="td">Name of Person</td>
+                                <td class="td">Items</td>
+                                <td class="td">Quantity</td>
+                                <td class="td">Site Name</td>
+                                <td class="td">Date</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td">1</td>
+                                <td class="td">Missing</td>
+                                <td class="td">Isaac Jude</td>
+                                <td class="td">Cement</td>
+                                <td class="td">2 bags</td>
+                                <td class="site">Dynamic construction company</td>
+                                <td class="td">12-09-2023</td>
+                            </tr>
+                            <tr>
+                                <td class="td">1</td>
+                                <td class="td">Missing</td>
+                                <td class="td">Isaac Jude</td>
+                                <td class="td">Cement</td>
+                                <td class="td">2 bags</td>
+                                <td class="site">Dynamic construction company</td>
+                                <td class="td">12-09-2023</td>
+                            </tr>
+                            <tr>
+                                <td class="td">1</td>
+                                <td class="td">Missing</td>
+                                <td class="td">Isaac Jude</td>
+                                <td class="td">Cement</td>
+                                <td class="td">2 bags</td>
+                                <td class="site">Dynamic construction company</td>
+                                <td class="td">12-09-2023</td>
+                            </tr>
+                            <tr>
+                                <td class="td">1</td>
+                                <td class="td">Missing</td>
+                                <td class="td">Isaac Jude</td>
+                                <td class="td">Cement</td>
+                                <td class="td">2 bags</td>
+                                <td class="site">Dynamic construction company</td>
+                                <td class="td">12-09-2023</td>
+                            </tr>
+                            <tr>
+                                <td class="td">1</td>
+                                <td class="td">Missing</td>
+                                <td class="td">Isaac Jude</td>
+                                <td class="td">Cement</td>
+                                <td class="td">2 bags</td>
+                                <td class="site">Dynamic construction company</td>
+                                <td class="td">12-09-2023</td>
+                            </tr>
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+              <!-------Pages------->
+                <div class="pages">
+                    <div class="pre">&lt;</div>
+                    <div class="pre">1</div>
+                    <div class="pre">2</div>
+                    <div class="pre">3</div>
+                    <div class="pre">&gt;</div>
+                </div>
             </div>
         </div>
 
     </section>
     
+    <!---------Add Item Popup--------------------->
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <h3>Add Item to Wharehouse</h3>
+        <select name="category" id="category">
+            <option value="select">Select category</option>
+            <option value="Technician">Technician</option>
+            <option value="Plumber">Plumber</option>
+            <option value="Tilers">Tilers</option>
+            <option value="Bricks Layers">Bricks Layers</option>
+        </select>
+        <span>
+            <select name="category" id="category">
+                <option value="select">Select Status</option>
+                <option value="Check-In">Check-In</option>
+                <option value="Check-Out">Check-Out</option>
+            </select>
+
+        </span>
+        <label for="itemsName">Name of Item
+            <input type="text" id="">
+        </label>
+        <label for="quantity">Quantity
+            <input type="text" id="">
+        </label>
+        <label for="location">Location
+            <input type="text" id="">
+        </label>
+        <label for="status">Status
+            <input type="radio" id="">
+        </label>
+        <button class="add-item-btn" id="addItemBtn">Add</button>
+    </div>
 
 
 

@@ -14,9 +14,9 @@ function showPanel(panelIndex, colorCode) {
     tabButtons.forEach(function(node){
         node.style.backgroundColor="";
         node.style.color="";
-    });
+});
     tabButtons[panelIndex].style.backgroundColor=colorCode;
-    tabButtons[panelIndex].style.color="white";
+    tabButtons[panelIndex].style.color="#111827";
     tabPanels.forEach(function(node){
         node.style.display="none";
     });
@@ -24,4 +24,13 @@ function showPanel(panelIndex, colorCode) {
     tabPanels[panelIndex].style.backgroundColor=colorCode;
 }
 
-showPanel(0, '#f44336');
+showPanel(0, '#d7d4d4');
+
+// Popup to add item script
+document.querySelector("#show-addBtn").addEventListener("click", function(){
+    document.querySelector(".popup").classList.add("active");
+});
+document.querySelector(".popup .close-btn").addEventListener("click", function(){
+    document.querySelector(".popup").classList.remove("active");
+});
+

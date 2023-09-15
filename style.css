@@ -289,13 +289,13 @@ tbody tr td {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
-  margin: 25px 0;
+  font-size: 18px;
+  padding: 25px;
 }
 .pages .pre {
   background: #828997;
   color: #fff;
-  padding: 5px 20px;
+  padding: 5px 15px;
   margin-left: 15px;
   cursor: pointer;
 }
@@ -413,7 +413,7 @@ tbody tr td {
     font-size: 18px;
     margin: 10px 0;
 }
-button {
+.login button {
     border-radius: 5px;
     background: #111827;
     margin: 10px 0;
@@ -423,7 +423,7 @@ button {
     outline: none;
     border: none;
 }
-button:hover {
+.login button:hover {
     border: 1px solid #fff;
     background: #000000;
     color: #fff;
@@ -468,7 +468,6 @@ button:hover {
 }
 .tabContainer .buttonContainer {
   height: 20%;
-  background: red;
 }
 .tabContainer .buttonContainer button {
   width: 25%;
@@ -479,13 +478,14 @@ button:hover {
   cursor: pointer;
   padding: 10px;
   font-size: 18px;
+  color: #111827;
 }
 .tabContainer .buttonContainer button:hover {
-  background: #111827;
   color: #787d8d;
+  background: #2b2b2b;
 }
+
 .tabContainer .tabPanel {
-  background: gray;
   padding-top: 50px;
   box-sizing: border-box;
   display: none;
@@ -502,6 +502,95 @@ element.style {
   width: 110px;
   padding: 5px 10px;
   color: #fff;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
+}
+.board .thead .td {
+  padding: 15px 5px;
+  width: 200px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #111827;
+}
+table tbody .site {
+  width: 300px;
+  padding: 15px 0;
+}
+.board .thead .sn {
+  padding: 5px 8px;
+}
+
+/* Popup add item style */
+.popup {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms;
+                opacity: 200ms ease-in-out 0ms;
+                transform: 200ms ease-in-out 0ms;
+}
+.popup.active {
+    top: 30%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 200ms;
+                opacity: 200ms ease-in-out 0ms;
+                transform: 200ms ease-in-out 0ms;
+
+}
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.popup h3 {
+  margin: 10px 0;
+  text-align: center;
+}
+.popup select {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+}
+.popup label {
+  display: block;
+  margin-top: 10px;
+}
+.popup input {
+  display: block;
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #828997;
+  color: #444a53;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.1);
+}
+.popup .add-item-btn {
+  background: #0963a7;
+  padding: 5px 10px;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  float: right;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.1);
 }
