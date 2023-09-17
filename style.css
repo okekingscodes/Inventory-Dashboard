@@ -594,3 +594,25 @@ table tbody .site {
   float: right;
   box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.1);
 }
+
+/*------ESTIMATE PAGE STYLE--------*/
+.receipt-table-head {
+  margin: 5px 60px;
+  width: 90%;
+  background: #111827;
+  color: #787d8d;
+}
+.table {
+  width: 90%;
+  margin: 0 60px;
+}
+.table #tablehead tr th {
+  text-align: start;
+}
+.table #newtr tr td {
+  text-align: start;
+}
+tbody tr td {
+  padding: 2px 10px; 
+}
+

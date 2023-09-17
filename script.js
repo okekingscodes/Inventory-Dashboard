@@ -34,3 +34,39 @@ document.querySelector(".popup .close-btn").addEventListener("click", function()
     document.querySelector(".popup").classList.remove("active");
 });
 
+
+//Estimate page script
+//Add new row from form inputs
+
+var price;
+var quantity;
+var amount;
+var prod_name;
+var ids;
+var tax = 50;
+var newtr;
+var amnt;
+
+function calculate() {
+ids = document.getElementById("ids").value;
+price = document.getElementById("prc").value;
+quantity = document.getElementById("qty").value;
+amount = price * quantity;
+document.getElementById("amnt").value = amount;
+}
+
+function addData() {
+prod_name = document.getElementById("product").value;
+document.getElementById('newtr').innerHTML += '<tr><td>' + ids + '</td><td>' + prod_name + '</td><td>' + price + '</td> <td>' + quantity + '</td><td>' + amount;
+document.getElementById("ids").value = "";
+document.getElementById("product").value = "";
+document.getElementById("prc").value = "";
+document.getElementById("qty").value = "";
+document.getElementById("amnt").value = "";
+document.getElementById("subtotal-amount").innerHTML = price * quantity;
+document.getElementById("total-amount").innerHTML = price * quantity - tax;
+document.getElementById("total").innerHTML = price * quantity - tax;
+}
+
+
+
