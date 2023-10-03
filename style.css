@@ -120,7 +120,8 @@
     width: calc(100% - 300px);
   }
   
-  #interface .navigation .search {
+  #interface .navigation .search, 
+  .addButtons .searchProductBar {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -135,6 +136,18 @@
     border: none;
     outline: none;
     font-size: 14px;
+  }
+  .addButtons .searchProductBar input {
+    padding: 12px 7px;
+    border: none;
+    outline: none;
+  }
+  .addButtons #searchBtn {
+    background: #111827;
+    padding: 6px 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
   }
   #interface .navigation .profile {
     display: flex;
@@ -254,18 +267,25 @@ table {
   border-collapse: collapse;
 }
 tr {
-  border-bottom: 2px solid #eef0f5;
+  border-bottom: 5px solid #eef0f5;
 }
 thead td {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 400;
-  background: #F9FAFB;
+  background: #111827;
+  color: #eef0f5;
   text-align: start;
   padding: 15px;
 }
 tbody tr td {
   padding: 10px 15px;
+}
+.board .actionBtn {
+  background: green;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
 }
 .active {
   background: #d7fada;
@@ -461,16 +481,57 @@ tbody tr td {
     padding-left: 10px;
 }
 
+/*-----------ADD PRODUCT BUTTONS STYLE----------------*/
+.addButtons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0 15px 30px;
+}
+.addButtons .addProductBtn {
+  background: #111827;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.addButtons .addProductBtn:hover {
+  background: transparent;
+  border-bottom: 2px solid #111827;
+  color: #111827;
+}
+.addProductBtn .searchProductBar {
+  background: red;
+}
 /*-----------TABS INVENTORY STYLE----------------*/
+.inventory-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 40px;
+}
+.inventory-buttons .item-btn {
+  background: #111827;
+  color: #828997;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.inventory-buttons .item-btn:hover {
+  background: transparent;
+  color: #111827;
+  border: 1px solid #111827;
+}
+
 .tabContainer {
-  width: 95%;
+  width: 98%;
   margin-left: 30px;
 }
 .tabContainer .buttonContainer {
   height: 20%;
 }
 .tabContainer .buttonContainer button {
-  width: 25%;
+  width: 33%;
   height: 100%;
   float: left;
   border: none;
@@ -495,35 +556,36 @@ element.style {
   color: white;
 }
 
-.inventory-btn {
-  margin: 15px 0 15px 30px;
-  background: #0963a7;
+.inventory-addBtn {
+  margin: 20px 0 15px 30px;
+  background: #111827;
   border-radius: 5px;
-  width: 110px;
-  padding: 5px 10px;
+  padding: 10px 15px;
   color: #fff;
   font-size: 15px;
   cursor: pointer;
+  text-align: center;
+  width: 150px;
 }
-.board .thead .td {
-  padding: 15px 5px;
-  width: 200px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #111827;
-}
-table tbody .site {
-  width: 300px;
-  padding: 15px 0;
-}
-.board .thead .sn {
-  padding: 5px 8px;
+.filter-btn {
+  background: transparent;
+  border: 1px solid #111827;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
 }
 
+
+
+
 /* Popup add item style */
-.popup {
+.popup,
+.checkInPopup,
+.checkOut,
+.productDetail {
     position: absolute;
-    top: -150%;
+    top: 30%;
     left: 50%;
     opacity: 0;
     transform: translate(-50%, -50%) scale(1.25);
@@ -536,7 +598,10 @@ table tbody .site {
                 opacity: 200ms ease-in-out 0ms;
                 transform: 200ms ease-in-out 0ms;
 }
-.popup.active {
+.popup.active,
+.checkInPopup.active,
+.checkOut.active,
+.productDetail.active {
     top: 30%;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
@@ -545,7 +610,10 @@ table tbody .site {
                 transform: 200ms ease-in-out 0ms;
 
 }
-.popup .close-btn {
+.popup .close-btn,
+.checkInPopup .close-btn,
+.checkOut .close-btn,
+.productDetail .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -558,6 +626,9 @@ table tbody .site {
     border-radius: 15px;
     cursor: pointer;
 }
+#productDetails {
+  cursor: pointer;
+}
 .popup h3 {
   margin: 10px 0;
   text-align: center;
@@ -568,13 +639,10 @@ table tbody .site {
   border-radius: 5px;
   outline: none;
 }
-.popup label {
-  display: block;
-  margin-top: 10px;
-}
 .popup input {
   display: block;
-  padding: 5px;
+  padding: 5px 10px;
+  margin: 10px 5px;
   width: 100%;
   border-radius: 5px;
   outline: none;
@@ -583,7 +651,7 @@ table tbody .site {
   box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.1);
 }
 .popup .add-item-btn {
-  background: #0963a7;
+  background: #111827;
   padding: 5px 10px;
   margin-top: 20px;
   color: #fff;
@@ -595,24 +663,161 @@ table tbody .site {
   box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.1);
 }
 
-/*------ESTIMATE PAGE STYLE--------*/
-.receipt-table-head {
-  margin: 5px 60px;
-  width: 90%;
+/*------ALL PRODUCTS CHECKIN AND CHECKOUT FORMS STYLE--------*/
+.product-details-window,
+.check-out-form,
+.material-in-use,
+.check-out-form {
+  margin: 15px 30px;
+  padding: 15px 10px;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+}
+.product-details-window p,
+.check-out-form p,
+.material-in-use p,
+.check-out-form p {
+  padding: 10px 5px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.product-details-window h2,
+.check-out-form h2,
+.material-in-use h2,
+.check-out-form h2 {
+  padding: 10px 0;
+  text-align: center;
   background: #111827;
-  color: #787d8d;
+  color: #828997;
+  cursor: pointer;
+  margin-bottom: 15px;
 }
-.table {
-  width: 90%;
-  margin: 0 60px;
+.check-out-form input,
+.check-out-form input {
+  padding: 5px;
+  margin: 10px 5px;
+  float: right;
 }
-.table #tablehead tr th {
-  text-align: start;
+.check-out-form textarea {
+  padding: 10px;
+  max-width: 400px;
+  max-height: 200px;
+  color: #828997;
 }
-.table #newtr tr td {
-  text-align: start;
+.product-details-window p span {
+  margin-left: 15px;
+  text-align: left;
 }
-tbody tr td {
-  padding: 2px 10px; 
+.formBtn {
+  background: #111827;
+  color: #828997;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 15px 30px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  float: right;
+}
+.formBtn:hover {
+  background: transparent;
+  color: #111827;
+  border-bottom: 2px solid #111827;
 }
 
+
+
+/*------------INVENT PAGE STYLE------------------*/
+.board thead .invent-thead {
+  font-weight: 600;
+}
+.checkout p span {
+  text-align: start;
+}
+
+
+
+/* Project board */
+.project-board {
+    width: 94%;
+    margin: 30px 0 30px 30px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.project-board .project-card {
+  background: #fff;
+  border-radius: 5px;
+  height: 140px;
+  padding: 40px 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+}
+.project-board .project-card:hover {
+  background: #111827;
+  color: #828997;
+}
+
+
+/* DBD STYLE */
+.dbd {
+  width: 94%;
+  margin: 10px 0 30px 30px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.dbd .inquiry {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-top: 20px;
+  height: 150px;
+  box-shadow: 0 2px 16px rgba(0,0,0,.1);
+}
+.dbd-cards a {
+  text-decoration: none;
+  padding: 30px;
+  color: #444a53;
+}
+.dbd-cards a h2 {
+  padding-bottom: 15px;
+}
+.dbd-cards a h5 {
+  padding: 5px 0;
+}
+
+.dbd-cards-plan {
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  color: #444a53;
+  margin: 20px 0;
+}
+.dbd-cards-plan h2 {
+  padding-bottom: 160px;
+}
+.dbd-cards-plan h5 {
+  padding: 5px 0;
+}
+.dbd-bottom {
+  margin: 10px 0 30px 30px;
+  border-radius: 8px;
+  width: 93%;
+  padding: 30px;
+  background: #fff;
+  color: #444a53;
+}
+.dbd-bottom h5 {
+  padding-bottom: 10px;
+}
+.dbd-bottom p {
+  padding-bottom: 5px;
+}

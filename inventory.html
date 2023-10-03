@@ -20,7 +20,7 @@
             <li><i class="fab fa-chart-pie-alt"></i><a href="dashboard.html">Dashboard</a></li>
             <li><i class="fab fa-uikit"></i><a href="inventory.html">Inventory</a></li>
             <li><i class="fas fa-th-large"></i><a href="estimate.html">Estimate</a></li>
-            <li><i class="fas fa-edit"></i><a href="#">Project Board</a></li>
+            <li><i class="fas fa-edit"></i><a href="project-board.html">Project Board</a></li>
             <div class="down">
                 <li><i class="fab fa-cc-vise"></i><a href="#">Settings</a></li>
                 <li><i class="fas fa-hamburger"></i><a href="#">Get Help</a></li>
@@ -80,76 +80,50 @@
                 </div>
             </div>
         </div>
-    
-        <div class="inventory-btn" id="show-addBtn">Add Items</div>
+        <!----------ADD PRODUCTS MACKUP---------------------->
+        <div class="addButtons">
+            <div class="addProductBtn" id="show-addBtn">
+                ADD PRODUCT
+            </div>
+            <div class="addProductBtn">
+                UPDATE PRODUCT
+            </div>
+            <div class="searchProductBar">
+                <input type="text">
+                <button id="searchBtn">Search</button> 
+            </div>
+        </div>
         
         <div class="tabContainer">
             <div class="buttonContainer">
                 <button onclick="showPanel(0, '#d7d4d4')">Warehouse</button>
-                <button onclick="showPanel(1, '#d7d4d4')">Check-Out</button>
-                <button onclick="showPanel(2, '#d7d4d4')">Check-In</button>
-                <button onclick="showPanel(3, '#d7d4d4')">Remarks</button>
+                <button onclick="showPanel(1, '#d7d4d4')">On-Hold</button>
+                <button onclick="showPanel(2, '#d7d4d4')">On-Site</button>
             </div>
        
             <div class="tabPanel">
                 <div class="board">
-                    <table width="95%">
+                    <table width="100%">
                         <thead class="thead">
                             <tr>
-                                <td class="sn">S/N</td>
-                                <td class="td">Name of Item</td>
-                                <td class="td">Quantity</td>
-                                <td class="td">Shelf Location</td>
-                                <td class="td">Status</td>
-                                <td class="td">Site Name</td>
-                                <td class="td">Date</td>
+                                <td>S/N</td>
+                                <td>Product Name</td>
+                                <td>Product ID</td>
+                                <td>Specification</td>
+                                <td>Location <br>(Shelf/Section)</td>
+                                <td>Quantity</td>
+                                <td>Action</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="td">1</td>
-                                <td class="td">Electric bubl</td>
-                                <td class="td">20</td>
-                                <td class="td">Shelf-D</td>
-                                <td class="td">Check-In</td>
-                                <td class="site">Dynamic construction company</td>
-                                <td class="td">12-09-2023</td>
-                            </tr>
-                            <tr>
-                                <td class="td">2</td>
-                                <td class="td">Electric bubl</td>
-                                <td class="td">20</td>
-                                <td class="td">Shelf-D</td>
-                                <td class="td">Check-In</td>
-                                <td class="site">Dynamic construction company</td>
-                                <td class="td">12-09-2023</td>
-                            </tr>
-                            <tr>
-                                <td class="td">3</td>
-                                <td class="td">Electric bubl</td>
-                                <td class="td">20</td>
-                                <td class="td">Shelf-D</td>
-                                <td class="td">Check-In</td>
-                                <td class="site">Dynamic construction company</td>
-                                <td class="td">12-09-2023</td>
-                            </tr>
-                            <tr>
-                                <td class="td">3</td>
-                                <td class="td">Electric bubl</td>
-                                <td class="td">20</td>
-                                <td class="td">Shelf-D</td>
-                                <td class="td">Check-In</td>
-                                <td class="site">Dynamic construction company</td>
-                                <td class="td">12-09-2023</td>
-                            </tr>
-                            <tr>
-                                <td class="td">3</td>
-                                <td class="td">Electric bubl</td>
-                                <td class="td">20</td>
-                                <td class="td">Shelf-D</td>
-                                <td class="td">Check-In</td>
-                                <td class="site">Dynamic construction company</td>
-                                <td class="td">12-09-2023</td>
+                                <td>1</td>
+                                <td id="productDetails">3M Road Lights</td>
+                                <td>AB13256X</td>
+                                <td>50x100</td>
+                                <td>BMZ018</td>
+                                <td>20</td>
+                                <td class="actionBtn" id="checkOutForm">Check-Out</td>
                             </tr>
                         </tbody>
                     </table>
@@ -169,78 +143,33 @@
             <!-- Content for the second tab goes here -->
             <div class="tabPanel">
                 <div class="board">
-                    <table width="95%">
+                    <table width="100%">
                         <thead class="thead">
                             <tr>
-                                <td class="sn">S/N</td>
-                                <td class="td">Full Name</td>
-                                <td class="td">Name of Item</td>
-                                <td class="td">Quantity</td>
-                                <td class="td">Site Name</td>
-                                <td class="td">Date</td>
-                                <td class="td">Remarks</td>
+                                <td>S/N</td>
+                                <td>Product Name</td>
+                                <td>Product ID</td>
+                                <td>Modified By</td>
+                                <td>Date</td>
+                                <td>Action</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="td">1</td>
-                                <td class="td">
-                                    <h5>Odim Kingsley</h5>
-                                    <p>Technician</p>
-                                </td>
-                                <td class="td">Tiles</td>
-                                <td class="td">12 packs</td>
-                                <td class="site">Portland company</td>
-                                <td class="td">12-09-2023</td>
-                                <td class="td">Approved</td>
+                                <td>1</td>
+                                <td>3M Road Light</td>
+                                <td>AB1325GX</td>
+                                <td>Jimmy Robby</td>
+                                <td>09-28-2023</td>
+                                <td class="actionBtn" id="checkOut">Approved</td>
                             </tr>
                             <tr>
-                                <td class="td">2</td>
-                                <td class="td">
-                                    <h5>Odim Kingsley</h5>
-                                    <p>Technician</p>
-                                </td>
-                                <td class="td">Tiles</td>
-                                <td class="td">12 packs</td>
-                                <td class="site">Portland company</td>
-                                <td class="td">12-09-2023</td>
-                                <td class="td">Approved</td>
-                            </tr>
-                            <tr>
-                                <td class="td">3</td>
-                                <td class="td">
-                                    <h5>Odim Kingsley</h5>
-                                    <p>Technician</p>
-                                </td>
-                                <td class="td">Tiles</td>
-                                <td class="td">12 packs</td>
-                                <td class="site">Portland company</td>
-                                <td class="td">12-09-2023</td>
-                                <td class="td">Approved</td>
-                            </tr>
-                            <tr>
-                                <td class="td">4</td>
-                                <td class="td">
-                                    <h5>Odim Kingsley</h5>
-                                    <p>Technician</p>
-                                </td>
-                                <td class="td">Tiles</td>
-                                <td class="td">12 packs</td>
-                                <td class="site">Portland company</td>
-                                <td class="td">12-09-2023</td>
-                                <td class="td">Approved</td>
-                            </tr>
-                            <tr>
-                                <td class="td">5</td>
-                                <td class="td">
-                                    <h5>Odim Kingsley</h5>
-                                    <p>Technician</p>
-                                </td>
-                                <td class="td">Tiles</td>
-                                <td class="td">12 packs</td>
-                                <td class="site">Portland company</td>
-                                <td class="td">12-09-2023</td>
-                                <td class="td">Approved</td>
+                                <td>1</td>
+                                <td>3M Road Light</td>
+                                <td>AB1325GX</td>
+                                <td>Jimmy Robby</td>
+                                <td>09-28-2023</td>
+                                <td class="actionBtn" id="checkOut">Approved</td>
                             </tr>
                         </tbody>
                     </table>
@@ -259,78 +188,25 @@
             <!-- Content for the third tab goes here -->
             <div class="tabPanel">
                 <div class="board">
-                    <table width="95%">
+                    <table width="100%">
                         <thead class="thead">
                             <tr>
-                                <td class="sn">S/N</td>
-                                <td class="td">Full Name</td>
-                                <td class="td">Name of Item</td>
-                                <td class="td">Quantity</td>
-                                <td class="td">Site Name</td>
-                                <td class="td">Date</td>
-                                <td class="td">Remarks</td>
+                                <td>S/N</td>
+                                <td>Product Name</td>
+                                <td>Specification</td>
+                                <td>Job Tag</td>
+                                <td>Staff ID</td>
+                                <td>Action</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="td">1</td>
-                                <td class="td">
-                                    <h5>Odim Kingsley</h5>
-                                    <p>Technician</p>
-                                </td>
-                                <td class="td">Tiles</td>
-                                <td class="td">12 packs</td>
-                                <td class="site">Portland company</td>
-                                <td class="td">12-09-2023</td>
-                                <td class="td">Approved</td>
-                            </tr>
-                            <tr>
-                                <td class="td">2</td>
-                                <td class="td">
-                                    <h5>Odim Kingsley</h5>
-                                    <p>Technician</p>
-                                </td>
-                                <td class="td">Tiles</td>
-                                <td class="td">12 packs</td>
-                                <td class="site">Portland company</td>
-                                <td class="td">12-09-2023</td>
-                                <td class="td">Approved</td>
-                            </tr>
-                            <tr>
-                                <td class="td">3</td>
-                                <td class="td">
-                                    <h5>Odim Kingsley</h5>
-                                    <p>Technician</p>
-                                </td>
-                                <td class="td">Tiles</td>
-                                <td class="td">12 packs</td>
-                                <td class="site">Portland company</td>
-                                <td class="td">12-09-2023</td>
-                                <td class="td">Approved</td>
-                            </tr>
-                            <tr>
-                                <td class="td">4</td>
-                                <td class="td">
-                                    <h5>Odim Kingsley</h5>
-                                    <p>Technician</p>
-                                </td>
-                                <td class="td">Tiles</td>
-                                <td class="td">12 packs</td>
-                                <td class="site">Portland company</td>
-                                <td class="td">12-09-2023</td>
-                                <td class="td">Approved</td>
-                            </tr>
-                            <tr>
-                                <td class="td">5</td>
-                                <td class="td">
-                                    <h5>Odim Kingsley</h5>
-                                    <p>Technician</p>
-                                </td>
-                                <td class="td">Tiles</td>
-                                <td class="td">12 packs</td>
-                                <td class="site">Portland company</td>
-                                <td class="td">12-09-2023</td>
-                                <td class="td">Approved</td>
+                                <td>1</td>
+                                <td>3M Road Lights</td>
+                                <td>50x100</td>
+                                <td>Churchhill Square</td>
+                                <td>TWF001</td>
+                                <td class="actionBtn" id="checkIn">Check-In</td>
                             </tr>
                         </tbody>
                     </table>
@@ -347,133 +223,115 @@
                 </div>
             </div>
             
-            <!-- Content for the fourth tab goes here -->
-            <div class="tabPanel">
-                <div class="board">
-                    <table width="95%">
-                        <thead class="thead">
-                            <tr>
-                                <td class="sn">S/N</td>
-                                <td class="td">Complaint</td>
-                                <td class="td">Name of Person</td>
-                                <td class="td">Items</td>
-                                <td class="td">Quantity</td>
-                                <td class="td">Site Name</td>
-                                <td class="td">Date</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="td">1</td>
-                                <td class="td">Missing</td>
-                                <td class="td">Isaac Jude</td>
-                                <td class="td">Cement</td>
-                                <td class="td">2 bags</td>
-                                <td class="site">Dynamic construction company</td>
-                                <td class="td">12-09-2023</td>
-                            </tr>
-                            <tr>
-                                <td class="td">1</td>
-                                <td class="td">Missing</td>
-                                <td class="td">Isaac Jude</td>
-                                <td class="td">Cement</td>
-                                <td class="td">2 bags</td>
-                                <td class="site">Dynamic construction company</td>
-                                <td class="td">12-09-2023</td>
-                            </tr>
-                            <tr>
-                                <td class="td">1</td>
-                                <td class="td">Missing</td>
-                                <td class="td">Isaac Jude</td>
-                                <td class="td">Cement</td>
-                                <td class="td">2 bags</td>
-                                <td class="site">Dynamic construction company</td>
-                                <td class="td">12-09-2023</td>
-                            </tr>
-                            <tr>
-                                <td class="td">1</td>
-                                <td class="td">Missing</td>
-                                <td class="td">Isaac Jude</td>
-                                <td class="td">Cement</td>
-                                <td class="td">2 bags</td>
-                                <td class="site">Dynamic construction company</td>
-                                <td class="td">12-09-2023</td>
-                            </tr>
-                            <tr>
-                                <td class="td">1</td>
-                                <td class="td">Missing</td>
-                                <td class="td">Isaac Jude</td>
-                                <td class="td">Cement</td>
-                                <td class="td">2 bags</td>
-                                <td class="site">Dynamic construction company</td>
-                                <td class="td">12-09-2023</td>
-                            </tr>
-                            
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-              <!-------Pages------->
-                <div class="pages">
-                    <div class="pre">&lt;</div>
-                    <div class="pre">1</div>
-                    <div class="pre">2</div>
-                    <div class="pre">3</div>
-                    <div class="pre">&gt;</div>
-                </div>
-            </div>
         </div>
 
+        <!--------VIEW PRODUCT DETAILS----->
+            <div class="productDetail">
+                <div class="close-btn">&times;</div>
+                <h2>PRODUCT DETAILS</h2>
+                <p>Product Name: <span>3M Road Light</span></p>
+                <p>Product ID: <span>AB1325GX</span></p>
+                <p>Specification: <span>50 x 100</span></p>
+                <p>Location: <span>BM2018</span></p>
+                <p>Quantity: <span>20</span></p>
+                <p>Run No.: <span>1367522</span></p>
+                <p>Usage Type: <span>Size</span></p>
+                <p>Description: <span>Lorem ipsum dolor sit amet.</span></p>
+                <p>Status: <span>Warehouse</span></p>
+            </div>
+
+            <!--------CHECK OUT FORM----->
+            <div class="checkOut">
+                <div class="close-btn">&times;</div>
+                <form action="#" method="post">
+                    <h2>CHECKOUT ITEM</h2>
+                        <p>Name: <span><input type="text" placeholder="e.g. Tom Parson"></span></p>
+                        <p>Staff ID: <span><input type="text" placeholder="e.g. TWF001"></span></p>
+                        <p>Job Tag: <span><input type="text" placeholder="e.g. Churchhill Square"></span></p>
+                        <p>Product Name: <span><input type="text" placeholder="e.g. 3M Road Light"></span></p>
+                        <p>Specification: <span><input type="text" placeholder="e.g. 50 x 100"></span></p>
+                        <p>Quantity: <span><input type="number" placeholder="e.g. 10"></span></p>
+                        <button type="submit" class="formBtn">CHECK OUT</button>
+                </form>
+            </div>
+            
+            <!--------MATERIALS IN USE----->
+            <div class="material-in-use">
+                <h2>MATERIAL IN-USE</h2>
+                <p>Product Name: <span>3M Road Light</span></p>
+                <p>Product ID: <span>AB1325GX</span></p>
+                <p>Staff ID: <span>TWF001</span></p>
+                <p>Material Used: <span>5</span></p>
+                <button>ADD</button>
+                <span><select name="" id="">
+                    <option value="size">Size</option>
+                    <option value="quantity">Quantity</option>
+                </select></span>
+                <button type="submit" class="formBtn">UPDATE</button>
+            </div>
+
+            <!--------CHECK IN FORM----->
+            <div class="checkInPopup">
+                <div class="close-btn">&times;</div>
+                <form action="#" method="post" id="checkOutForm">
+                    <h2>CHECK IN ITEM</h2>
+                    <div class="checkIn">
+                        <p>Name: <span><input type="text" placeholder="e.g. Tom Parson"></span></p>
+                        <p>Staff ID: <span><input type="text" placeholder="e.g. TWF001"></span></p>
+                        <p>Job Tag: <span><input type="text" placeholder="e.g. Churchhill Square"></span></p>
+                        <p>Product Name: <span><input type="text" placeholder="e.g. 3M Road Light"></span></p>
+                        <p>Specification: <span><input type="text" placeholder="e.g. 50 x 100"></span></p>
+                        <p>Material Used: <span><input type="number" placeholder="e.g. 20"></span></p>
+                        <p>Quantity: <span><input type="number" placeholder="e.g. 10"></span></p>
+                        <p>Location: <span><input type="text" placeholder="e.g. BM2018"></span></p>
+                        <p>Re-Usuable Product: <span><input type="checkbox"></span></p>
+                        <p>Re-Usuable Note: <span><input type="text" placeholder="e.g. 1 resuable left"></span></p>
+                        <textarea name="general-note" id="">General Note Here...</textarea>
+                        <button type="submit" class="formBtn" id="checkIn">CHECK IN</button>
+                    </div>
+                </form>
+            </div>
     </section>
     
-    <!---------Add Item Popup--------------------->
-    <div class="popup">
-        <div class="close-btn">&times;</div>
-        <h3>Add Item to Wharehouse</h3>
-        <select name="category" id="category">
-            <option value="select">Select category</option>
-            <option value="Technician">Technician</option>
-            <option value="Plumber">Plumber</option>
-            <option value="Tilers">Tilers</option>
-            <option value="Bricks Layers">Bricks Layers</option>
-        </select>
-        <span>
+        <!---------Add Item Popup--------------------->
+        <div class="popup">
+            <div class="close-btn">&times;</div>
+            <h3>PRODUCT DETAILS</h3>
+                <input type="text" id="" placeholder="Product Name">
+                <input type="number" id="" placeholder="Product ID">
+                <input type="text" id="" placeholder="Specification">
+                <input type="text" id="" placeholder="Location">
+                <input type="number" id="" placeholder="Quantity">
+                <input type="text" id="" placeholder="Run No.">
             <select name="category" id="category">
-                <option value="select">Select Status</option>
-                <option value="Check-In">Check-In</option>
-                <option value="Check-Out">Check-Out</option>
+                <option value="select">Usage Type</option>
+                <option value="size">Size</option>
+                <option value="quantity">Quantity</option>
             </select>
+                <input type="text" id="" placeholder="Description">
+                <input type="text" id="" placeholder="Status">
+            <button class="add-item-btn" id="addItemBtn">Add</button>
+        </div>
 
-        </span>
-        <label for="itemsName">Name of Item
-            <input type="text" id="">
-        </label>
-        <label for="quantity">Quantity
-            <input type="text" id="">
-        </label>
-        <label for="location">Location
-            <input type="text" id="">
-        </label>
-        <label for="status">Status
-            <input type="radio" id="">
-        </label>
-        <button class="add-item-btn" id="addItemBtn">Add</button>
-    </div>
 
+   
     
-    <!--------Logout Modal-
-    <div class="popup1">
-        <div class="close-btn">&times;</div>
-        <h4>Sure you want to logout?</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum qui laboriosam fuga vitae architecto veritatis error sequi modi nisi aliquam consectetur, consequuntur maxime iste iusto enim voluptas tempore provident quisquam.</p>
-                <button>Logout</button>
-            </div>
-    </div>
-    ---->
+    
+        <!--------Logout Modal-
+        <div class="popup1">
+            <div class="close-btn">&times;</div>
+            <h4>Sure you want to logout?</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum qui laboriosam fuga vitae architecto veritatis error sequi modi nisi aliquam consectetur, consequuntur maxime iste iusto enim voluptas tempore provident quisquam.</p>
+                    <button>Logout</button>
+                </div>
+        </div>
+        ---->
 
 
 
     <script src="script.js"></script>
+    <script src="./popup/script.js"></script>
+    <script src="./popup/chescript.js"></script>
+    <script src="./popup/proscript.js"></script>
 </body>
 </html>

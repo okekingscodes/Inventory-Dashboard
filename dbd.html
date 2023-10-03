@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="images/google_logo.png" alt="logo">
+            <h2>Dynamic</h2>
+        </div>
+    
+        <ul class="items"> <!-- Changed the div to ul -->
+            <li><i class="fab fa-chart-pie-alt"></i><a href="dashboard.html">Dashboard</a></li>
+            <li><i class="fab fa-uikit"></i><a href="inventory.html">Inventory</a></li>
+            <li><i class="fas fa-th-large"></i><a href="estimate.html">Estimate</a></li>
+            <li><i class="fas fa-edit"></i><a href="project-board.html">Project Board</a></li>
+            <div class="down">
+                <li><i class="fab fa-cc-vise"></i><a href="#">Settings</a></li>
+                <li><i class="fas fa-hamburger"></i><a href="#">Get Help</a></li>
+                <li><i class="fas fa-chart-line"></i><a href="#">Log Out</a></li>
+            </div>
+        </ul>
+    </section>
+    
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="nav">
+                <i id="menu-btn" class="fas fa-bars"></i>
+                <div class="search">
+                    <i class="far fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <img src="images/profile.JPG" alt="">
+            </div>
+        </div>
+
+        <h3 class="i-name">
+            Project Dashboard
+        </h3>
+
+        <div class="dbd">
+            <div class="dbd-cards">
+                <div class="inquiry">
+                    <a href="inquiries/new-inquiry.html">
+                        <h2>INQUIRIES <br> (RFT)</h2>
+                        <h3>8</h3> 
+                    </a>   
+                </div>
+                
+                 <div class="inquiry">
+                    <a href="">
+                        <h2>QUOTES/TENDER</h2>
+                        <p>Submitted in the last month 10</p>
+                    </a>  
+                </div>
+            </div>
+
+            <div class="dbd-cards dbd-cards-plan">
+                <h2>PLANNING</h2>
+                <h5>Project schedule 8</h5>
+                <h5>Pending schedule 8</h5>
+                <h5>Total projects 10</h5>
+            </div>
+            <div class="dbd-cards">
+                <div class="inquiry">
+                    <a href="">
+                        <h2>EXECUTION</h2>
+                        <h5>On-site 5</h5>
+                        <h5>On-hold 2</h5>
+                    </a>
+                </div>
+
+                <div class="inquiry">
+                    <a href="">
+                        <h2>INVOICE</h2>
+                        <h5>Invoiced 7</h5>
+                        <h5>Pending 6</h5>
+                    </a>    
+                </div>
+                
+            </div>
+
+           
+        </div>
+         <div class="dbd-bottom">
+                <h5>Completed Projects</h5>
+                <p>Last month completed 6</p>
+                <p>Confirmation require</p>
+            </div>
+
+        <div class="board">
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

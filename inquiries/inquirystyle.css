@@ -1,0 +1,111 @@
+.inquiry-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 94%;
+    margin: 30px 0 30px 30px;
+    overflow: auto;
+    border-radius: 8px;
+  }
+.new-inquiry-form {
+    width: 300px;
+    margin: 0 10px;
+   border-radius: 5px;
+   padding: 15px 5px 0 15px;
+   background: #fff;
+   box-shadow: 0 2px 16px rgba(0,0,0,.1);
+}
+.new-inquiry-form h2 {
+    text-align: center;
+    font-size: 20px;
+}
+.new-inquiry-form input {
+   display: block;
+   padding: 5px 15px;
+   margin: 10px 0;
+   border-radius: 5px;
+   border: none;
+   outline: none;
+   background: #e1e4eb;
+   font-size: 16px;
+   width: 90%;
+}
+.new-inquiry-form .sendBtn {
+   background: #111827;
+   margin: 20px 10px;
+   padding: 10px 15px;
+   color: #fff;
+   font-size: 18px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.new-inquiry-form select{
+    padding: 10px 15px;
+    margin: 15px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background: #111827;
+    color: #e1e4eb;
+}
+#inquiry-type option {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.inquiry-board .quotes-card {
+    margin: 5px 10px;
+    border-radius: 5px;
+    padding: 10px 5px;
+    background: #fff;
+}
+.inquiry-board .quotes-card h3 {
+   font-size: 25px;
+   text-align: center;
+   padding: 15px 0;
+   cursor: pointer;
+}
+.quotes-card .view-details {
+    max-width: 200px;
+    background: #111827;
+    text-align: center;
+    color: #fff;
+    margin: 15px 40px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.quotes-card .quote-detail {
+    margin: 15px 10px;
+    padding: 10px 5px;
+}
+.quotes-card .quote-detail h5 {
+    padding: 5px 0;
+}
+.quotes-card .quote-detail p {
+    padding: 5px 0;
+}
+.quotes-card .percent-loading {
+    margin-top: 25px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.quotes-card .percent-loading .cent {
+    background: red;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin-top: 15px;
+}
+.quote-detail .view-details a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.quote-detail span {
+    font-weight: 600;
+    float: right;
+    max-width: 200px;
+}

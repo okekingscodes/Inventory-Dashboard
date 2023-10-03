@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link rel="stylesheet" href="all-inquiry.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="../images/google_logo.png" alt="logo">
+            <h2>Dynamic</h2>
+        </div>
+    
+        <ul class="items"> <!-- Changed the div to ul -->
+            <li><i class="fab fa-chart-pie-alt"></i><a href="dashboard.html">Dashboard</a></li>
+            <li><i class="fab fa-uikit"></i><a href="inventory.html">Inventory</a></li>
+            <li><i class="fas fa-th-large"></i><a href="estimate.html">Estimate</a></li>
+            <li><i class="fas fa-edit"></i><a href="project-board.html">Project Board</a></li>
+            <div class="down">
+                <li><i class="fab fa-cc-vise"></i><a href="#">Settings</a></li>
+                <li><i class="fas fa-hamburger"></i><a href="#">Get Help</a></li>
+                <li><i class="fas fa-chart-line"></i><a href="#">Log Out</a></li>
+            </div>
+        </ul>
+    </section>
+    
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="nav">
+                <i id="menu-btn" class="fas fa-bars"></i>
+                <div class="search">
+                    <i class="far fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <img src="../images/profile.JPG" alt="">
+            </div>
+        </div>
+
+        <h3 class="i-name">
+            INQUIRIES 
+        </h3>
+
+        <div class="inquiry-board">
+            <div class="tab_box">
+                <button class="tab_btn active">Quotes</button>
+                <button class="tab_btn">Tenders</button>
+            </div>
+            <div class="content_box">
+                <div class="content active">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>S/N</td>
+                                <td>Customer Name</td>
+                                <td>Phone</td>
+                                <td>Email</td>
+                                <td>Date Requested</td>
+                                <td>0% Complete</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Andrew Besidowve</td>
+                                <td>08178506546</td>
+                                <td>okekings@gmail.com</td>
+                                <td>27-09-2023</td>
+                                <td>100%</td>
+                                <td><a href="" class="view-btn">View Details</a></td>
+                            </tr>
+                        </tbody>
+                    </table>   
+                </div>       
+                <div class="content">
+                    <table>
+                        <thead class="thead">
+                            <tr>
+                                <td class="sn">S/N</td>
+                                <td class="td">Customer Name</td>
+                                <td class="td">Phone</td>
+                                <td class="td">Email</td>
+                                <td class="td">Date Requested</td>
+                                <td class="td">0% Complete</td>
+                                <td class="td"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Andrew Besidowve</td>
+                                <td>08178506546</td>
+                                <td>okekings@gmail.com</td>
+                                <td>27-09-2023</td>
+                                <td>100%</td>
+                                <td><a href="" class="view-btn">View Details</a></td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+                
+            </div>
+        </div>
+         
+    </section>
+
+
+    <script src="all-inquiry.js"></script>
+</body>
+</html>
